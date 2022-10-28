@@ -1,7 +1,3 @@
-## React-Course-Polls-App
-
-Polls app for react redux course
-
 ## Running the project
 
 Navigate into the ./polls directory and run npm install.
