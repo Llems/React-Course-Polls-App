@@ -16,7 +16,7 @@ const DashboardTile = (props) => {
                         timestamp = {formatDate(timestamp)}
                     </div>
                     <hr/>
-                    <Link to={'/question/' + props.id} className="replying-to">
+                    <Link to={'/questions/' + props.id} className="replying-to">
                         Show
                     </Link>
                 </div>

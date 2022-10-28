@@ -6,20 +6,20 @@ const Dashboard = (props) => {
     const userAnswered = props.users[props.authedUser].answers;
     const answeredQuestions = props.questionIds.filter((id) => userAnswered.hasOwnProperty(id) )
     const unansweredQuestions = props.questionIds.filter((id) => !answeredQuestions.includes(id))
-    const [showUnanswered, setShowUnanswered] = React.useState(true);
-    const [showAnswered, setShowAnswered] = React.useState(false);
+    const [currentQuestions, setCurrentQuestions] = React.useState("unanswered");
+
 
 
     const handleUnansweredClick = (e) => {
         e.preventDefault();
 
-        setShowUnanswered(!showUnanswered);
+        setCurrentQuestions("unanswered");
     }
 
     const handleAnsweredClick = (e) => {
         e.preventDefault();
 
-        setShowAnswered(!showAnswered);
+        setCurrentQuestions("answered");
     }
 
     return(
@@ -35,8 +35,9 @@ const Dashboard = (props) => {
                 
                 </ul>
             </nav>
-            <h3 className="center "> Unanswered questions</h3>
-            {showUnanswered ? 
+            {currentQuestions === "unanswered" ?
+            <>
+                <h3 className="center "> Unanswered questions</h3>
                 <ul className="dashboard-list">
                     {
                         unansweredQuestions.map((id) => (
@@ -47,20 +48,21 @@ const Dashboard = (props) => {
                         ))
                     }
                 </ul>
-            : null }
-            
-            <h3 className="center"> Answered questions</h3>
-            {showAnswered ? 
-            <ul className="dashboard-list">
-                {
-                    answeredQuestions.map((id) => (
-                        <li key={id}>
-                            <DashboardTile id={id}/>
-                        </li>
-                    ))
-                }
-            </ul>
-            : null}
+            </>
+            : 
+                <>
+                <h3 className="center"> Answered questions</h3>
+                <ul className="dashboard-list">
+                    {
+                        answeredQuestions.map((id) => (
+                            <li key={id}>
+                                <DashboardTile id={id}/>
+                            </li>
+                        ))
+                    }
+                </ul>
+                </>
+            }
         </div>
     )
 };

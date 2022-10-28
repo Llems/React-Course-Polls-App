@@ -8,6 +8,7 @@ import Dashboard from './Dashboard';
 import NewQuestion from './NewQuestion';
 import Leaderboard from './Leaderboard';
 import Question from './Question';
+import EmptyPage from './404Page';
 
 
 const App = (props) => {
@@ -23,10 +24,11 @@ const App = (props) => {
       :  <div>
           <Nav />
           <Routes>
+            <Route path="*" element={<EmptyPage />} />
             <Route path="/" exact element={<Dashboard/>}/>
             <Route path="/add" exact element={<NewQuestion/>}/>
             <Route path="/leaderboard" exact element={<Leaderboard/>}/>
-            <Route path="/question/:id" element={<Question />} />
+            <Route path="/questions/:id" element={<Question />} />
           </Routes>
         </div>
         }

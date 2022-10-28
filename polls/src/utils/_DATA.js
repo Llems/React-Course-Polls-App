@@ -3,7 +3,7 @@
         id: 'sarahedo',
         password:'password123',
         name: 'Sarah Edo',
-        avatarURL: null,
+        avatarURL: '/logo192.png',
         answers: {
             "8xf0y6ziyjabvozdd253nd": 'optionOne',
             "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -16,7 +16,7 @@
         id: 'tylermcginnis',
         password:'abc321',
         name: 'Tyler McGinnis',
-        avatarURL: null,
+        avatarURL: '/tyler.jpg',
         answers: {
             "vthrdm985a262al8qx3do": 'optionOne',
             "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -27,7 +27,7 @@
         id: 'mtsamis',
         password:'xyz123',
         name: 'Mike Tsamis',
-        avatarURL: null,
+        avatarURL: '/leaf.jpg',
         answers: {
             "xj352vofupe1dqz9emx13r": 'optionOne',
             "vthrdm985a262al8qx3do": 'optionTwo',
@@ -39,7 +39,7 @@
         id: 'zoshikanlu',
         password:'pass246',
         name: 'Zenobia Oshikanlu',
-        avatarURL: null,
+        avatarURL: '/snow.jpg',
         answers: {
             "xj352vofupe1dqz9emx13r": 'optionOne',
         },

@@ -58,21 +58,22 @@ const Question = (props) => {
         }
     }
 
+    console.log(usersChoice);
 
     return (
             <div>
                 <h1> Poll by {question.author}</h1>
-                <img alt="user avatar" src={props.users[props.authedUser].avatarURL}/>
+                <img className="avatar" alt="user avatar" src={props.users[question.author].avatarURL}/>
                 <h2> Would you rather:</h2>
                 <h3>{question.optionOne.text}</h3>
                 <button className="replying-to" onClick={handleButtonClickOne}> Choose </button>
                 {usersChoice === "optionOne" ? <span> Currently Chosen</span> : null } 
-                <h5>Current Votes:{optionOneVotes}, Percentage of Votes: %{ (optionOneVotes/totalVotes) * 100}</h5>
+                {usersChoice !== undefined ? <h5>Current Votes:{optionOneVotes}, Percentage of Votes: %{ (optionOneVotes/totalVotes) * 100}</h5> : null}
                 <hr/>
                 <h3>{question.optionTwo.text}</h3>
                 <button className="replying-to" onClick={handleButtonClickTwo}> Choose </button>
                 {usersChoice === "optionTwo" ? <span> Currently Chosen</span> : null } 
-                <h5>Current Votes:{optionTwoVotes}, Percentage of Votes:%{ (optionTwoVotes/totalVotes) * 100}</h5>
+                {usersChoice !== undefined ? <h5>Current Votes:{optionTwoVotes}, Percentage of Votes:%{ (optionTwoVotes/totalVotes) * 100}</h5> : null}
             </div>
         );
 };

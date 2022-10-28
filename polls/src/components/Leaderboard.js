@@ -29,7 +29,7 @@ const Leaderboard = ({users}) => {
                         infoArray.map((num) =>(
                             <div className="row" key={num[0]}>
                                 <div className="name">{num[0]}  </div>
-                                <img className="name" alt="user avatar" src={users[num[0]].avatarURL}/>  
+                                <img className="picture avatar" alt="user avatar" src={users[num[0]].avatarURL}/>  
                                 <div className="answered">Questions Answered: {num[1]} </div>      
                                 <div className="posted"> Questions Posted: {num[2]}</div>
                             </div>
