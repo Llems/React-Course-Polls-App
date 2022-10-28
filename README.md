@@ -1,4 +1,5 @@
-# React-Course-Polls-App
+## React-Course-Polls-App
+
 Polls app for react redux course
 
 ## Running the project
