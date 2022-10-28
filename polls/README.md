@@ -1,3 +1,9 @@
+## Polls Project
+
+This is a polls project where users can create polls for others to vote on. The users are displayed on a leaderboard based on their voting performance.
+
+This app uses react redux to track state and will log that state to the console for better debugging and grading.
+
 ## Running the project
 
 Navigate into the ./polls directory and run npm install.
